@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     env:
-      LATEST_RELEASE: 2023.1.3
+      LATEST_RELEASE: 2023.2.3
     steps:
       - name: Retrieve PsychoPy latest release
         id: psychopy_latest

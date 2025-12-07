@@ -8,4 +8,9 @@ runs:
   using: "composite"
   steps:
     - shell: bash
-      run: ./auto.sh
+      run: |
+        if [ "${{ runner.os }}" == "Windows" ]; then
+          bash -ef "${{ github.action_path }}/auto.sh"
+        else
+          ${{ github.action_path }}/auto.sh
+        fi
